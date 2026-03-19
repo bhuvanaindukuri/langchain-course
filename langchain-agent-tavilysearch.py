@@ -22,7 +22,7 @@ agent = create_agent(
 def main():
     print("Hello from langchain agent")
     result = agent.invoke(
-        {"messages": [HumanMessage(content="Search for Chief Architect positions in LinkedIn in Bangalore")]}
+        {"messages": [HumanMessage(content="Search for Chief Architect jobs in LinkedIn portal in Bangalore")], "response_format": AgentResponse}
     )
     print(result["messages"][-1].content)
     
